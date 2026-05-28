@@ -31,7 +31,7 @@ jobs:
           Rscript scripts/smoke_check.R
           Rscript scripts/render_readme_assets.R
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - id: deployment

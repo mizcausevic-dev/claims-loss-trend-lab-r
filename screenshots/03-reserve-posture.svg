@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#08101d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#05070c"/>
+  <rect x="48" y="48" width="1504" height="804" rx="30" fill="url(#bg)" stroke="#17324d" stroke-width="2"/>
+  <text x="96" y="118" fill="#ffcc66" font-family="ui-monospace,Consolas,monospace" font-size="26" letter-spacing="6">RESERVE POSTURE</text>
+  <text x="96" y="196" fill="#f2f7ff" font-family="Georgia,Times New Roman,serif" font-size="62" font-weight="700">Reserve adequacy and reopen pressure stay buyer-readable.</text>
+  <text x="96" y="138" fill="#b8c9df" font-family="Segoe UI,Arial,sans-serif" font-size="30">
+    <tspan x="96" dy="0">Reserve posture flags where open reserves</tspan>
+    <tspan x="96" dy="40">lag expected ultimate loss and where</tspan>
+    <tspan x="96" dy="40">reopening pressure is compounding.</tspan>
+  </text>
+  <text x="96" y="292" fill="#b8c9df" font-family="Segoe UI,Arial,sans-serif" font-size="30">
+    <tspan x="96" dy="0">Property catastrophe: Escalate reserve</tspan>
+    <tspan x="96" dy="40">review, tighten vendor evidence, and</tspan>
+    <tspan x="96" dy="40">re-forecast severity immediately. | Cyber</tspan>
+    <tspan x="96" dy="40">liability: Escalate reserve review, tighten</tspan>
+    <tspan x="96" dy="40">vendor evidence, and re-forecast severity</tspan>
+    <tspan x="96" dy="40">immediately. | Commercial auto: Increase</tspan>
+    <tspan x="96" dy="40">adjuster review cadence and validate</tspan>
+    <tspan x="96" dy="40">reserve assumptions before quarter close. |</tspan>
+    <tspan x="96" dy="40">Group disability: Increase adjuster review</tspan>
+    <tspan x="96" dy="40">cadence and validate reserve assumptions</tspan>
+    <tspan x="96" dy="40">before quarter close.</tspan>
+  </text>
+</svg>

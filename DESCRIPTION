@@ -1,0 +1,10 @@
+Package: claimslosstrendlabr
+Title: Claims Loss Trend Lab R
+Version: 0.1.0
+Authors@R:
+    person("Miz", "Causevic", email = "miz@kineticgain.com", role = c("aut", "cre"))
+Description: Base-R insurance loss trend and reserve posture operator surface for the Kinetic Gain language atlas.
+License: AGPL-3.0-or-later
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 7.3.3

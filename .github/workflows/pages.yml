@@ -30,7 +30,7 @@ jobs:
           Rscript test/runtests.R
           Rscript scripts/smoke_check.R
           Rscript scripts/render_readme_assets.R
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

@@ -218,7 +218,7 @@ overview_content <- function(result) {
     cards,
     "</div></section>",
     "<div class=\"quote\"><div class=\"lbl\">Why this matters</div><div class=\"q\">A claims trend lab is monetizable when the same R model supports reserve reviews, carrier evidence packets, and consulting-grade quarter-close briefings.</div></div>",
-    "<footer><div>discipline · insurance trend analysis</div><div>focus · loss ratio / reserve gap / reopen pressure</div><div>overview snapshot</div></footer>"
+    "<footer><div>discipline · insurance trend analysis</div><div>focus · loss ratio / reserve gap / reopen pressure</div><div>overview snapshot</div><div><a href=\"https://github.com/mizcausevic-dev/\">GitHub</a> · <a href=\"https://www.linkedin.com/in/mirzacausevic/\">LinkedIn</a> · <a href=\"https://kineticgain.com/\">Kinetic Gain</a></div></footer>"
   )
 }
 

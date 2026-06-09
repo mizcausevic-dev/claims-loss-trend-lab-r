@@ -138,6 +138,17 @@ status_badge <- function(status) {
   sprintf("<span class=\"status %s\">%s</span>", accent, toupper(status))
 }
 
+site_footer <- function(context = "claims loss proof surface") {
+  paste0(
+    "<footer>",
+    "<div>", html_escape(context), "</div>",
+    "<div><a href=\"https://loss.kineticgain.com/\">loss.kineticgain.com</a></div>",
+    "<div><a href=\"https://portfolio.kineticgain.com/\">Portfolio</a> · <a href=\"https://suite.kineticgain.com/\">Suite</a> · <a href=\"https://github.com/mizcausevic-dev/claims-loss-trend-lab-r\">Repo</a></div>",
+    "<div><a href=\"https://www.linkedin.com/in/mirzacausevic/\">LinkedIn</a> · <a href=\"https://kineticgain.com/\">Kinetic Gain</a></div>",
+    "</footer>"
+  )
+}
+
 row_html <- function(df) {
   pieces <- apply(df, 1, function(row) {
     sprintf(
@@ -217,8 +228,18 @@ overview_content <- function(result) {
     "<section class=\"section\"><div class=\"sh\"><h2>Programs to review first</h2><div class=\"note\">Buyer-readable remediation sequence</div></div><div class=\"cards\">",
     cards,
     "</div></section>",
+    "<section class=\"section\"><div class=\"sh\"><h2>Product depth</h2><div class=\"note\">SaaS value architecture and GTM posture</div></div><div class=\"cards\">",
+    "<div class=\"card\"><div class=\"eyebrow\">Executive buyer value</div><h3>Loss drift becomes a quarter-close decision.</h3><p>Claims, actuarial, finance, and insurance operations leaders can see where reserve gaps, reopen pressure, severity movement, and appeals friction are already creating quarter-close risk.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Technical proof</div><h3>One R analysis path feeds every route.</h3><p>The same base-R functions produce the loss lane, trend matrix, reserve posture, sitemap, README assets, and smoke checks. That keeps the public proof reproducible instead of manually assembled.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Commercial motion</div><h3>From lab to carrier evidence packet.</h3><p>This can ladder into carrier packet templates, reserve review decks, adverse-development diagnostics, MGA review workflows, and embedded evidence-routing work for insurance teams.</p></div>",
+    "</div></section>",
+    "<section class=\"section\"><div class=\"sh\"><h2>What these repos have in common</h2><div class=\"note\">Kinetic Gain operating pattern</div></div><div class=\"cards\">",
+    "<div class=\"card\"><div class=\"eyebrow\">Risk</div><h3>Make drift explicit.</h3><p>Each repo turns a fuzzy operating problem into a named risk surface with score, status, owner-readable context, and next-action language.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Proof</div><h3>Keep evidence attached.</h3><p>The product story, synthetic data contract, generated routes, sitemap, screenshots, and validation path ship together so the claim can be inspected.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Action</div><h3>Route the next move.</h3><p>The output is not another generic dashboard. It is an operator-usable control plane for what to recover, escalate, package, or simplify next.</p></div>",
+    "</div></section>",
     "<div class=\"quote\"><div class=\"lbl\">Why this matters</div><div class=\"q\">A claims trend lab is monetizable when the same R model supports reserve reviews, carrier evidence packets, and consulting-grade quarter-close briefings.</div></div>",
-    "<footer><div>discipline · insurance trend analysis</div><div>focus · loss ratio / reserve gap / reopen pressure</div><div>overview snapshot</div><div><a href=\"https://github.com/mizcausevic-dev/\">GitHub</a> · <a href=\"https://www.linkedin.com/in/mirzacausevic/\">LinkedIn</a> · <a href=\"https://kineticgain.com/\">Kinetic Gain</a></div></footer>"
+    site_footer("discipline · insurance trend analysis")
   )
 }
 
@@ -236,7 +257,8 @@ loss_lane_content <- function(result) {
               html_escape(row[["severity_pressure_k"]]),
               status_badge(row[["status"]]))
     }), collapse = ""),
-    "</tbody></table></div></section>"
+    "</tbody></table></div></section>",
+    site_footer("loss lane · program ownership")
   )
 }
 
@@ -254,7 +276,8 @@ trend_matrix_content <- function(result) {
   paste0(
     "<div class=\"topbar\"><div class=\"left\">claims loss trend lab · trend matrix</div><div class=\"right\"><div>trend. reserve. reopen.</div></div></div>",
     "<section class=\"hero\"><h1>Trend shifts stay tied to operational action.</h1><p>This route turns raw statistical deltas into program-specific review guidance teams can use for reserve committees and carrier evidence packets.</p></section>",
-    "<section class=\"section\"><div class=\"cards\">", lines, "</div></section>"
+    "<section class=\"section\"><div class=\"cards\">", lines, "</div></section>",
+    site_footer("trend matrix · reserve movement")
   )
 }
 
@@ -269,7 +292,8 @@ reserve_posture_content <- function(result) {
   paste0(
     "<div class=\"topbar\"><div class=\"left\">claims loss trend lab · reserve posture</div><div class=\"right\"><div>reserve committee packet</div></div></div>",
     "<section class=\"hero\"><h1>Reserve adequacy and reopen pressure stay auditable.</h1><p>The reserve posture route shows which books need immediate reserve review and where evidence routing should tighten before quarter-close reporting.</p></section>",
-    "<section class=\"section\"><div class=\"tablewrap\"><table><thead><tr><th>Program</th><th>Reserve Gap</th><th>Recommendation</th></tr></thead><tbody>", rows, "</tbody></table></div></section>"
+    "<section class=\"section\"><div class=\"tablewrap\"><table><thead><tr><th>Program</th><th>Reserve Gap</th><th>Recommendation</th></tr></thead><tbody>", rows, "</tbody></table></div></section>",
+    site_footer("reserve posture · quarter-close evidence")
   )
 }
 
@@ -281,7 +305,8 @@ verification_content <- function(result) {
     "<div class=\"card\"><div class=\"eyebrow\">Validation</div><h3>R runtime</h3><p>Validated with Rscript demo, tests, site generation, and smoke checks.</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Routes</div><h3>Static proof surface</h3><p>/ · /loss-lane/ · /trend-matrix/ · /reserve-posture/ · /verification/ · /docs/</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Commercial path</div><h3>Templates and consulting</h3><p>Paid templates now, with embedded reserve reviews and evidence routing by engagement.</p></div>",
-    "</div></section>"
+    "</div></section>",
+    site_footer("verification · generated proof")
   )
 }
 
@@ -293,7 +318,8 @@ docs_content <- function() {
     "<div class=\"card\"><div class=\"eyebrow\">Tier 1</div><h3>Public proof</h3><p>Open-source dashboard route and claims trend model with buyer-readable outputs.</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Tier 2</div><h3>Paid templates now</h3><p>Carrier packet templates, loss-trend decks, and reserve review starter kits.</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Tier 4</div><h3>Embedded by engagement</h3><p>Kinetic Gain can adapt the trend lab for a carrier, MGA, or broker operations team.</p></div>",
-    "</div></section>"
+    "</div></section>",
+    site_footer("docs · insurance evidence operations")
   )
 }
 
